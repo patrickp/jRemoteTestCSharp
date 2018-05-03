@@ -60,21 +60,7 @@ namespace jRemoteTest
                 txtVersion.Text = strMajor + "." + strMinor;
                 */
                 txtResult.Text = "Logged in";
-                var sample = new { test = "Field", test2 = "Field2" };
-                var json = JsonConvert.SerializeObject(sample);
-                txtResult.Text = json;
-
-                JSubroutineParameters callParams = new JSubroutineParameters();
-                callParams.add(new JDynArray(""));
-                callParams.add(new JDynArray(""));
-
-                JSubroutineParameters returnParams = Conn.call("NW.BUILD.SUB", callParams);
-
-                txtResult.Text = returnParams.get(1).ToString();
-
-
-
-
+                
             }
 
             catch (Exception ex)
